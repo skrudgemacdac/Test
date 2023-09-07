@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class SignInWindow : AccountWindowDataBase
 {
+    private readonly Dictionary<string, CatalogItem> _catalog = new Dictionary<string, CatalogItem>();
+
     [SerializeField]
     private Button _signInButton;
 
@@ -16,6 +18,7 @@ public class SignInWindow : AccountWindowDataBase
 
     public void SignIn()
     {
+        PlayFabClientAPI.GetCatalogItems(new GetCatalogItemsRequest(), ItemsLoadingSuccess, ItemsLoadingFailure);
         PlayFabClientAPI.LoginWithPlayFab(new LoginWithPlayFabRequest
         {
             Username = _username,
@@ -38,5 +41,26 @@ public class SignInWindow : AccountWindowDataBase
     {
         base.SubscriptionUIElements();
         _signInButton.onClick.AddListener(SignIn);
+    }
+
+    protected void ItemsLoadingFailure(PlayFabError error)
+    {
+        var _errorMessage = error.GenerateErrorReport();
+        Debug.LogError($"CatalogLoadingFailure: {_errorMessage}");
+    }
+
+    protected void ItemsLoadingSuccess(GetCatalogItemsResult result)
+    {
+        HandleCatalog(result.Catalog);
+        Debug.Log($"Catalog was loaded successfully!");
+    }
+
+    private void HandleCatalog(List<CatalogItem> catalog)
+    {
+        foreach (var item in catalog)
+        {
+            _catalog.Add(item.ItemId, item);
+            Debug.Log($"Catalog item {item.ItemId} was added successfully!");
+        }
     }
 }
