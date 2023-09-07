@@ -1,0 +1,82 @@
+{
+  "CataloVersion": "1.0",
+  "Catalog": [
+    {
+      "ItemId": "Ranged_Weapon_Id",
+      "ItemClass": "Crossbow",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Crossbow",
+      "Description": "",
+
+      "VirtualCurrencyPrices": {
+        "FR": 100
+      },
+      "RealCurrencyPrices": {},
+      "Tags": "Crossbow, weapon, arrow",
+      "CustomData": "null",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null
+    },
+
+    {
+      "ItemId": "Small_Ranged_Weapon_Id",
+      "ItemClass": "Sling",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Sling",
+      "Description": "",
+
+      "VirtualCurrencyPrices": {
+        "FR": 200
+      },
+      "RealCurrencyPrices": {},
+      "Tags": "Sling, stone",
+      "CustomData": "null",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": false,
+      "IsTradable": true,
+      "ItemImageUrl": null
+    },
+
+    {
+      "ItemId": "Small_SteelArms_Id",
+      "ItemClass": "Knife",
+      "CatalogVersion": "1.0",
+      "DisplayName": "Knife",
+      "Description": "",
+
+      "VirtualCurrencyPrices": {
+        "FR": 30
+      },
+      "RealCurrencyPrices": {},
+      "Tags": "Knife, steel",
+      "CustomData": "null",
+      "Consumable": {
+        "UsageCount": null,
+        "UsagePeriod": null,
+        "UsagePeriodGroup": null
+      },
+      "Container": null,
+      "Bundle": null,
+      "CanBecomeCharacter": false,
+      "IsStackable": true,
+      "IsTradable": false,
+      "ItemImageUrl": null
+    }
+  ]
+}
