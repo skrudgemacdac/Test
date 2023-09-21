@@ -1,9 +1,8 @@
 using PlayFab;
 using PlayFab.ClientModels;
-using System.Collections;
+using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class PlayFabAccountManager : MonoBehaviour
 {
